@@ -1,0 +1,23 @@
+body {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("http://www.bestmoviesbyfarr.com/static-assets/images/articles/background/2014/02/2-1qgq1r9.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: center;
+  text-align: center;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 200;
+  color: #00cdcd;
+  margin: 1em;
+  padding: 1em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  /*margin: 1em;*/
+  padding: 1em;
+}
+
