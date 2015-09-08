@@ -78,9 +78,10 @@ App.prototype.favorite = function(movieID){
   xhr.setRequestHeader("Content-Type",  "application/json")
   var self = this;
   xhr.onload = function(){
-    console.log(response)
+    // debugger
+    console.log(xhr.response)
   }
-  xhr.send(thisMovie);
+  xhr.send(JSON.stringify(thisMovie));
 }
 
 App.prototype.favoriteSuccess = function(responseText){
