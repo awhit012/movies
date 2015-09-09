@@ -65,7 +65,6 @@ App.prototype.getFavoritesSuccess = function(response){
   var favs = JSON.parse(response); // favs is now a JS object of name, imdbID pairs
   self = this;
   for (var key in favs){
-    debugger
     console.log(String(favs[key]));
     self.getMovieDetails(favs[key]) // for each movie's id, get the details of this movie
   }
@@ -86,6 +85,7 @@ App.prototype.getResults = function(input){
 }
 
 App.prototype.searchSuccess = function(responseText){
+  this.myMovies = []; // clear out myMovies array
   this.searchResults = JSON.parse(responseText)['Search']; // searchResults is now an array of JS objects each representing a movie
   this.createMovies();
   this.addMoviesToDOM();
@@ -184,5 +184,5 @@ App.prototype.favorite = function(movieID){
 
 App.prototype.favoriteSuccess = function(responseText){
 
-  console.log('tentative success!' + responseText);
+  console.log('Success! ' + responseText);
 }
