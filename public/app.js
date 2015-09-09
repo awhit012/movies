@@ -62,11 +62,12 @@ App.prototype.getFavorites = function () {
 App.prototype.getFavoritesSuccess = function(response){
   this.favoritePage = true;
   this.mainDiv.innerHTML = "" // clear the div
-  var favs = JSON.parse(response)["favorites"]; // favs is now an array of imdbIDs
-  var i;
+  var favs = JSON.parse(response); // favs is now a JS object of name, imdbID pairs
   self = this;
-  for (i = 0; i < favs.length; i++){
-    self.getMovieDetails(favs[i]) // for each movie's id, get the details of this movie
+  for (var key in favs){
+    debugger
+    console.log(String(favs[key]));
+    self.getMovieDetails(favs[key]) // for each movie's id, get the details of this movie
   }
 }
 
